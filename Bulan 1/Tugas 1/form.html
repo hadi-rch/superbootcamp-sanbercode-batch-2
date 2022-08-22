@@ -5,8 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <style>
+        body {
+                margin:0;
+            }
+            ul.custom-nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #fff;
+            border: 1px solid #aaa;
+            }
+
+            .custom-nav li {
+            float: right;
+            }
+            .custom-nav li:first-child {
+            float: left;
+            }
+
+            .custom-nav li a {
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            .custom-nav li a:hover {
+            color : white;
+            background-color: #111;
+            }
+
+            .custom-nav img{
+                width: 150px;
+
+            }
+            .content{
+                width: 70%;
+                background: white;
+                min-height: 500px;
+                margin: 0 auto;
+                margin-top: 10px;
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: black;
+                color: white;
+                text-align: center;
+                }
+            .h1{
+                text-align: center;
+            }
+    </style>
+
+
 </head>
 <body>
+    <ul class="custom-nav"> 
+        <li><img src="public/img/logo.png"></li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="articel.html">Articel</a></li>
+        <li><a href="form.html">Register</a></li>
+      </ul>
+
+    <div class="content">
     <h1>Register Akun Baru!</h1>
     <h2>Isilah form di bawah ini</h2>
     <form action="form.html">
@@ -47,9 +114,14 @@
         <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
         <br>
         <form method="POST" action="process.html">
+            <a href="process.html">
             <input type="submit"/>
+            </a>
           </form>
         </form> 
-
+    </div>
 </body>
+<!-- <div class="footer">
+    <p>Copyright @ 2022 by Sanbercode</p>
+</div> -->
 </html>
