@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register Akun Baru!</h1>
+    <h2>Isilah form di bawah ini</h2>
+    <form action="form.html">
+        <label for="fname">First name:</label><br><br>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="fname">Last name:</label><br><br>
+        <input type="text" id="fname" name="fname"><br>
+
+        <p>Gender</p>
+        <input type="radio" id="Male" name="fav_language" value="Male">
+        <label for="html">Male</label>
+        <input type="radio" id="Female" name="fav_language" value="Female">
+        <label for="css">Female</label><br><br>
+
+        <label for="Nationality">Nationality :</label><br><br>
+        <select id="Nationality" name="nationality">
+            <option value="Indonesian">Indonesian</option>
+            <option value="Malaysian">Malaysian</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Thailand">Thailand</option>
+        </select><br><br>
+
+        <label for="niat">Sedang Fokus Belajar :</label><br><br>
+        <select id="niat" name="niat">
+            <option value="ReactJs">ReactJs</option>
+            <option value="Flutter">Flutter</option>
+            <option value="Laravel">Laravel</option>
+            <option value="java">java</option>
+        </select><br><br>
+
+        <p>Language Spoken :</p>
+        <input type="checkbox" id="gender1" name="male" value="male">
+        <label for="male">Male</label>
+        <input type="checkbox" id="gender2" name="Female" value="Female">
+        <label for="Female">Female</label><br>
+
+        <p>Deskripsi diri Saya :</p>
+        <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+        <br>
+        <form method="POST" action="process.html">
+            <input type="submit"/>
+          </form>
+        </form> 
+
+</body>
+</html>
