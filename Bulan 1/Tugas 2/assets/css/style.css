@@ -119,6 +119,7 @@ footer {
     } */
     .fa-thumbs-up{
         animation: like 5s infinite;
+        /* animation: like 3s linear infinite; */
     }
     @keyframes like {
         5% {transform: rotate(10deg);}
