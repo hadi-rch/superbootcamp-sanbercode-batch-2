@@ -1,0 +1,39 @@
+1.login
+Store "Username" with any value
+Store "Password" value 12345678
+IF "Username" null
+    "Password" not 12345678
+   Do "Error"
+ Else 
+    Do "Berhasil"
+Display "Login Success"
+
+2. Antri Minyak Goreng
+Store "jam buka" to 600
+Store "Stok" to 200
+Store "ibu datang" to 180
+Store "Kecepatan habis" to 2
+Store "Sisa Stok" without any value
+Calculate "ibu datang" divide "kecepatan habis"
+Set "Sisa" Vqlue with value calculation result
+IF "Sisa Stok" < 1
+	Display "Habis"
+ELSE 
+	Display "Masih ada"
+
+3.Laundry Day
+Store "Pakaian" With 0
+While "Pakaian" < 20
+    Add "Pakaian" by 1
+Display "Turn on mesin cuci"
+
+4.Periksa kuku
+Store "Siswa" to 1
+
+while "Siswa" < 41
+Add "Siswa" by 1
+
+IF "kuku panjang"
+	Display "menghukum"
+Else 
+	Display "memuji"
