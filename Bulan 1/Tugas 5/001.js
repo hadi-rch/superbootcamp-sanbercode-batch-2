@@ -56,7 +56,7 @@ var tgllahir = 1922 && lahir <=1964 ? 'Baby boomer': lahir >= 1965 && lahir <=19
         lahir >= 1980 && lahir <=1994 ? 'Generasi Y': lahir >= 1995 && lahir <=2015? 'Generasi Z': 'Undifined';
 console.log(tgllahir);
 
-var qsw = "======================soal 5============================";
+var qsw = "======================soal 5===========================";
 console.log(qsw);
 var pendapatan = 2500000;
 var total =""
