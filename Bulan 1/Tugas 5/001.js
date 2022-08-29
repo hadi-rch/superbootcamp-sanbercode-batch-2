@@ -52,9 +52,9 @@ switch(bulan){
 var qre = "======================soal 4============================";
 console.log(qre);    
 var lahir = 1999;
-var tgllahir = 1922 && lahir <=1964 ? 'Baby boomer': lahir >= 1965 && lahir <=1979? 'Generasi X':
+var thnlahir = 1922 && lahir <=1964 ? 'Baby boomer': lahir >= 1965 && lahir <=1979? 'Generasi X':
         lahir >= 1980 && lahir <=1994 ? 'Generasi Y': lahir >= 1995 && lahir <=2015? 'Generasi Z': 'Undifined';
-console.log(tgllahir);
+console.log(thnlahir);
 
 var qsw = "======================soal 5===========================";
 console.log(qsw);
@@ -64,10 +64,10 @@ var jasa =""
 var komisi = ""
 if (pendapatan <=2000000 ,pendapatan){
     jasa =100000;
-    komisi =1*pendapatan;
+    komisi =0.1*pendapatan;
 }else if(pendapatan > 5000000 && pendapatan <=10000000){  
     jasa =300000;
-    komisi =3*pendapatan;
+    komisi =0.2*pendapatan;
 }else(pendapatan > 2000000 && pendapatan <=5000000);{
     jasa =200000;
     komisi =0.15*pendapatan;
