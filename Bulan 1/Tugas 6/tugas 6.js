@@ -26,7 +26,7 @@ for(a=1; a<=20; a++) {
     
 console.log("=============soal 3 ==================");
 var angka = 20
-for (let i = 1; i <= angka; i++) {
+for ( var i = 1; i <= angka; i++) {
     if(i%2==0 && i%3==0) {
         console.log(i +  ' - Super Bootcamp')
     } else if(i%2!=0 && i%3==0) {
