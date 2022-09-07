@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.custom-header{
+  /* border: 1px solid #aaa; */
+  padding: 20px;
+  width: 90%;
+  /* margin: auto; */
+}
+
+.body{
+  margin: 20px;
+  min-height: 500px;
+  border: 1px solid #aaa;
+  padding: 20px;
+  width: 30%;
+  margin: auto;
+}
+.form{
+  text-align: center;
+
+}
+.logo{
+  margin: auto;
+}
+.h2 {
+  margin:auto;
+  min-height: 10px;
+  text-align: left;
+  /* border: #61dafb; */
+  background-color: white;
+  /* font-stretch: expanded; */
+  /* background-color: green; */
+  /* font-size: larger; */
+  font-weight: lighter;
+  font-size: 30px;
+  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif */
+
+}
+p {
+  margin: auto;
+  text-align: left  ;
+  min-height: 10px;
+  margin-bottom: 20px;
+}
+div.mkl {
+  padding-right: 10px;
+  text-align: left;
+}
+
+input {
+  width: 30px;
+  height: 1.25rem;
+  justify-content: center;
+  text-align: left;
+} 
+
+.button{
+  width: 100%;
+  padding: 10px;
+  background-color: #3DB2FF;
+  text-align: center;
+  padding-bottom: 25px;
+  color: white;
+  border-style: none;
+}
+
+.button:hover{
+  background-color: red;
+}
+
