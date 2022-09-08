@@ -5,9 +5,9 @@ import React from 'react';
 import CountDown from "./fifth"
 import './tugas-hooks.css';
 
-const countDown = time => {
-    return String(time).length === 1 ? `${time}` : `${time}`;
-  };
+// const countDown = time => {
+//     return String(time).length === 1 ? `${time}` : `${time}`;
+//   };
   
 //   const format = time => {
 //     // Ubah detik menjadi menit dan ambil seluruh bagian
@@ -21,7 +21,7 @@ const countDown = time => {
 //   };
   
   function App() {
-    const [counter, setCounter] = React.useState(6);
+    const [counter, setCounter] = React.useState(100);
     React.useEffect(() => {
       let timer;
       if (counter > 0) {
