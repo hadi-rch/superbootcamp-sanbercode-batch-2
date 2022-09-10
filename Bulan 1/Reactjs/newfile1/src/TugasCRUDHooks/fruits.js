@@ -37,17 +37,14 @@ const CRUDFruits = ()=>{
     };
     const handleChange = (event) => {
         let value = event.target.value
-        console.log(value)
         setInputName(value)
     }
     const handleChange1 = (event) => {
         let value1 = event.target.value
-        console.log(value1)
         setInputPrice(value1)
     }
     const handleChange2 = (event) => {
         let value2 = event.target.value
-        console.log(value2)
         setInputWeight(value2)
     }
     const handleDelete = (event) => {
@@ -71,7 +68,6 @@ const CRUDFruits = ()=>{
         let currentDaftarBuah = daftarBuah[index]
 
         setInputName(currentDaftarBuah.nama)
-        console.log(currentDaftarBuah)
         setInputPrice(currentDaftarBuah.hargaTotal)
         setInputWeight(currentDaftarBuah.beratTotal)
         setCurrentIndex(index)
@@ -79,9 +75,6 @@ const CRUDFruits = ()=>{
         setStatusForm("edit")
     }
    
-
-
-
     return(
             <>
                 <h1>Daftar Harga Buah</h1>
