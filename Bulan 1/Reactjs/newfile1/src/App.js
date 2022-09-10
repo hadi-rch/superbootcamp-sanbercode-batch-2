@@ -1,8 +1,9 @@
 import './App.css';
 import React from 'react';
-import CustomHeader from "./Header"
-import Intro from "./Tugas-Intro-ReactJS/tugasIntroReact"
-import First from "./Tugas-Hooks/tugasHooks"
+// import CustomHeader from "./Header"
+// import Intro from "./Tugas-Intro-ReactJS/tugasIntroReact"
+// import First from "./Tugas-Hooks/tugasHooks"
+import CRUDFruits from './TugasCRUDHooks/fruits';
 
 
 
@@ -11,9 +12,11 @@ function App()  {
   
  return (
     <div className="App">
-    <CustomHeader/>
+    {/* <CustomHeader/>
       <First/>
-      <Intro/>
+      <Intro/> */}
+
+      <CRUDFruits/>
     </div>
   );
 
