@@ -25,6 +25,7 @@ function tambahDataFilm(judul, durasi, genre, tahun){
     return dataFilm.push(data);
 }
 var dataFilm = []
+
 tambahDataFilm("LOTR", "2 jam", "action", "1999")
 tambahDataFilm("avenger", "2 jam", "action", "2019")
 tambahDataFilm("spiderman", "2 jam", "action", "2004")

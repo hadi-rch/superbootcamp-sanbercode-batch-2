@@ -35,8 +35,12 @@ import './tugas-hooks.css';
     }, [counter]);
     return (
       <div className="cdn">
-        <h1><CountDown/></h1>
-        <h3>{counter === 0 ? "" : <div>Countdown: {(counter)}</div>}</h3>
+        {/* <h1><CountDown/></h1> */}
+        <h3>{counter === 0 ? "" : 
+        <div>
+          {(CountDown)}
+          Countdown: {(counter)}
+        </div>}</h3>
       </div>
     );
   }

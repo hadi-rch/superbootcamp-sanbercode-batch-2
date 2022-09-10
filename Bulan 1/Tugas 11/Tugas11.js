@@ -144,8 +144,12 @@ const data2 = [
   { name: "Fikri", class: "agile"},
   { name: "Arief", class: "agile"}
 ]
- const graduate = (s) = {
-    
+ const graduate = (s) => {
+    let classP = []
+    for (let i = 0; i < s.length; i++) {
+        if (classP.indexOf(s[i]).class === -1){
+            
+        }
  }
 
 console.log(graduate(data1))
