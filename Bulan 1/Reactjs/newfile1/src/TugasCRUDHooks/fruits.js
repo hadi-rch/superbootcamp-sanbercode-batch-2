@@ -137,7 +137,7 @@ const CRUDFruits = ()=>{
                                     </div>
 
                             </form>
-                    </div>
+                         </div>
 
                     </>
                 )
