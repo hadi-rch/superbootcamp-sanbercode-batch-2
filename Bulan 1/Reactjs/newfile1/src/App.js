@@ -1,10 +1,13 @@
-// import './App.css';
+import './App.css';
 
 import React from 'react';
 // import CustomHeader from "./Header"
 // import Intro from "./Tugas-Intro-ReactJS/tugasIntroReact"
 // import First from "./Tugas-Hooks/tugasHooks"
-import CRUDFruits from './TugasCRUDHooks/fruits';
+// import CRUDFruits from './TugasCRUDHooks/fruits';
+// import Peserta from './axios/latihan';
+// import JawabanCrud from './TugasCRUDHooks/jawabanCRUD';
+import Student from './Tugas Axios';
 
 
 
@@ -16,8 +19,10 @@ function App()  {
     {/* <CustomHeader/>
       <First/>
       <Intro/> */}
-
-      <CRUDFruits/>
+      {/* <JawabanCrud/> */}
+      {/* <Peserta/> */}
+      {/* <CRUDFruits/> */}
+      <Student/>
     </div>
   );
 
