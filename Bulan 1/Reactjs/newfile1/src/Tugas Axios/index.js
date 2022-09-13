@@ -6,7 +6,15 @@ const Student= () =>{
     const [inputName, setInputName] =  useState("")
     const [inputCourse, setInputCourse] =  useState("")
     const [inputScore, setInputScore] =  useState("")
+    const [showForm, setShowForm] = useState(false)
+    const [statusForm, setStatusForm] = useState("create")
     const [currentId, setCurrentId] =  useState(null)
+
+    const addNewStudents = ()=>{
+      setShowForm(true)
+      setStatusForm("create")
+  }
+
 
     useEffect( () => {
         const fetchData = async () => {
@@ -27,6 +35,9 @@ const Student= () =>{
           setInputCourse(data.course)
           setInputScore(data.score)
           setCurrentId(data.id)
+
+          setStatusForm("edit")
+          setShowForm(true)
         })
       }
     
@@ -36,6 +47,7 @@ const Student= () =>{
         .then(() => {
           let newNamaStudent = namaStudent.filter(el=> {return el.id !== idStudent})
           setNamaStudent(newNamaStudent)
+          setShowForm(false)
         })
       }
 
@@ -79,6 +91,7 @@ const Student= () =>{
         setInputName("")
         setInputCourse("")
         setInputScore("")
+        setShowForm(false)
         setCurrentId(null)
       }
 
@@ -86,7 +99,7 @@ const Student= () =>{
       return(
         <>
           { namaStudent !== null &&
-            (<div style={{width: "70%", margin: "0 auto", textAlign: "center"}}>
+            ( <div className="App">
               <h1>Daftar Student</h1>
               <table className="custom-table">
                 <thead>
@@ -114,9 +127,9 @@ const Student= () =>{
                             item.score <= 70 && item.score >=60 ? 'C': item.score <= 60 && item.score >=50? 'D':
                             item.score <= 50 && item.score >=0 ? 'E': 'Undifined'}</td>
                             <td>
-                            <button onClick={handleEdit} value={item.id}>Edit</button>
+                            <button className="button-edit" onClick={handleEdit} value={item.id}>Edit</button>
                             &nbsp;
-                            <button onClick={handleDelete} value={item.id}>Delete</button>
+                            <button className="button-delete" onClick={handleDelete} value={item.id}>Delete</button>
                             </td>
                           </tr>
                         )
@@ -124,9 +137,12 @@ const Student= () =>{
                     }
                 </tbody>
               </table>
-
-                {/* Form */}
-                <h1>Form Student</h1>
+              {!showForm && <button className="button-add" onClick={addNewStudents}> Tambah Data Siswa</button>}
+            {showForm && 
+                (
+                    <>
+              
+                <h1>{statusForm === "create" ? "Tambah Data SIswa" : `Sunting Data Siswa ID ${currentId+1}`}</h1>
                 <form className="custom-form" onSubmit={handleSubmit}>
             
                     <div className="custom-input">
@@ -139,14 +155,16 @@ const Student= () =>{
                     </div>
                     <div className="custom-input">
                         <label htmlFor="name">Nilai</label>
-                        <input required autoComplete="off" type="number" name="score" value={inputScore} onChange={handleChange2} placeholder="Masukan Nilai"/>
+                        <input required autoComplete="off" type="number" min={0} max={100} name="score" value={inputScore} onChange={handleChange2} placeholder="Masukan Nilai"/>
                     </div>    
-                <button>submit</button>
+                <button className="btn">submit</button>
                 </form>
 
+                  </>
+                )}
 
-
-            </div>)
+            </div>
+            )
           }
     
         </>
