@@ -2,10 +2,11 @@ import React, {useContext} from "react"
 import {BuahContext} from "./BuahContext"
 
 const BuahForm = () =>{
-  const [daftarBuah, setDaftarBuah, inputName, seInputtName, inputPrice, setInputPrice, inputWeight, setInputWeight, showForm, setShowForm, 
+  const [daftarBuah, setDaftarBuah, inputName, setInputName, inputPrice, setInputPrice, inputWeight, 
+    setInputWeight, showForm, setShowForm, 
     statusForm, setStatusForm, currentIndex, setCurrentIndex] = useContext(BuahContext)
   const addNewDataBuah = () => {
-      seInputtName("")
+      setInputName("")
       setInputPrice()
       setInputWeight()
       setShowForm(true)
@@ -23,13 +24,13 @@ const BuahForm = () =>{
       }
       setCurrentIndex(-1)
       setShowForm(false)
-      seInputtName("")
+      setInputName("")
       setInputPrice("")
       setInputWeight("")
   }
 
   const handleChange = (event) =>{
-    seInputtName(event.target.value)
+    setInputName(event.target.value)
   }
       
   const handleChange1 = (event) =>{
