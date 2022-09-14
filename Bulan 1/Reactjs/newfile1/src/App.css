@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-}
 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,12 +36,180 @@
     transform: rotate(360deg);
   }
 }
+
+
 .custom-header{
-  /* border: 1px solid #aaa; */
+  border: 1px solid #aaa;
   padding: 20px;
   width: 90%;
-  /* margin: auto; */
+  margin: auto;
 }
+
+.custom-body{
+  margin: 20px;
+  min-height: 500px;
+  border: 1px solid #aaa;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+table.custom-table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: auto;
+}
+
+.custom-table th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+.custom-table tr:nth-child(even){background-color: #f2f2f2}
+
+.custom-table th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.custom-form{
+  border: 1px solid #aaa;
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+}
+
+.custom-form form{
+  width: 70%;
+  margin: auto;
+}
+
+.custom-input{
+  text-align: left;
+}
+
+.custom-input label{
+  margin-right: 20px;
+}
+
+.custom-form .custom-input input[type=text]{
+  width: 80%;
+}
+
+
+.custom-form input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.custom-form input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-form input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.button-delete{
+  background-color: #CA0B00;
+  color: white;
+  padding: 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-edit{
+  background-color: #FEDE00;
+  color: rgb(13, 12, 12);
+  padding: 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-add {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mr-10{
+  margin-right: 10px;
+}
+
+nav.custom-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+/* nav.custom-nav ul.light {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(206, 198, 198);
+} */
+
+nav.custom-nav li {
+  float: left;
+}
+
+nav.custom-nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* nav.custom-nav li a.light {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} */
+
+nav.custom-nav li a:hover {
+  background-color: #111;
+}
+/* nav.custom-nav li a:hover.light {
+  background-color: white;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .body{
   margin: 20px;
@@ -105,126 +273,4 @@ input {
 
 .button:hover{
   background-color: red;
-}
-
-table.custom-table {
-  border-collapse: collapse;
-  width: 70%;
-  margin: auto;
-}
-
-.custom-table th, td {
-  text-align: center;
-  padding: 8px;
-}
-
-.custom-table tr:nth-child(even){background-color: #f2f2f2}
-
-.custom-table th {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.custom-form{
-  border: 1px solid ;
-  background-color:#ccc;
-  padding: 5px;
-  width: 70%;
-  margin: auto;
-}
-
-.custom-form form{
-  width: 70%;
-  margin: auto;
-}
-
-.custom-input{
-  text-align: left;
-}
-
-.custom-input label{
-  margin-right: 20px;
-}
-.custom-input label [name=name]{
-  text-align: right;
-}
-
-.custom-form .custom-input input[type=text],[type=number]{
-  width: 70%;
-}
-
-
-.custom-form input[type=text],[type=number], select {
-  width: 70%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.custom-form input[type=submit] {
-  width: 20%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  text-align: center;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.custom-form input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.button-delete{
-  background-color: #CA0B00;
-  color: white;
-  padding: 5px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.button-edit{
-  background-color: #FEDE00;
-  color: rgb(13, 12, 12);
-  padding: 5px;
-  margin: 8px 8px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  
-}
-
-.button-add {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 5px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.mr-10{
-  margin-right: 10px;
-}
-input[type=submit]:hover {
-  background-color: #45a049;
-  padding-bottom: 200px;
-  
-}
-.btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 7px 20px;
-  margin: 8px 5px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }

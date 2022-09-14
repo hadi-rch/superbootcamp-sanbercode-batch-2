@@ -1,39 +1,18 @@
-// import './App.css';
-
-
+import './App.css';
 import React from 'react';
-// import CustomHeader from "./Header"
-// import Intro from "./Tugas-Intro-ReactJS/tugasIntroReact"
-// import First from "./Tugas-Hooks/tugasHooks"
-// import CRUDFruits from './TugasCRUDHooks/fruits';
-// import Peserta from './axios/latihan';
-// import JawabanCrud from './TugasCRUDHooks/jawabanCRUD';
-// import Student from './Tugas Axios';
-// import Move from './Context/movie';
-import Fruits from './TugasContext/Buah';
+import Routes from './TugasRouter';
+import { ThemeProvider } from './Context/theme';
 
+  function App()  {
+    
+    return (
+      <ThemeProvider>
+        <Routes/>
+      </ThemeProvider>
+      );
 
-
-function App()  {
-  // let thingsToDo = ["Belajar GIT & CLI", "Belajar HTML & CSS", "Belajar Javascript", "Belajar ReactJS Dasar", "Belajar ReactJS Advance"]
-  
- return (
-    <div className="App">
-    {/* <CustomHeader/>
-      <First/>
-      <Intro/> */}
-      {/* <JawabanCrud/> */}
-      {/* <Peserta/> */}
-      {/* <CRUDFruits/> */}
-      {/* <Student/> */}
-      {/* <Move/> */}
-      
-      <Fruits/>
-    </div>
-  );
-
-}
-export default App;
+    }
+  export default App;
 
 
 
