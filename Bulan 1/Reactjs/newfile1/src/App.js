@@ -1,4 +1,5 @@
-import './App.css';
+// import './App.css';
+
 
 import React from 'react';
 // import CustomHeader from "./Header"
@@ -7,7 +8,9 @@ import React from 'react';
 // import CRUDFruits from './TugasCRUDHooks/fruits';
 // import Peserta from './axios/latihan';
 // import JawabanCrud from './TugasCRUDHooks/jawabanCRUD';
-import Student from './Tugas Axios';
+// import Student from './Tugas Axios';
+// import Move from './Context/movie';
+import Fruits from './TugasContext/Buah';
 
 
 
@@ -22,7 +25,9 @@ function App()  {
       {/* <JawabanCrud/> */}
       {/* <Peserta/> */}
       {/* <CRUDFruits/> */}
-      <Student/>
+      {/* <Student/> */}
+      {/* <Move/> */}
+      <Fruits/>
     </div>
   );
 
