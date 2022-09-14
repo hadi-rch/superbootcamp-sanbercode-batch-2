@@ -55,7 +55,7 @@ const BuahForm = () =>{
               <label htmlFor='harga'>Harga Total:</label>
             <input type="number" value={inputPrice} onChange={handleChange1} />
               <label htmlFor='berat'>Berat Total (dalam gram) :</label>
-            <input type="number" value={inputWeight} onChange={handleChange2} />
+            <input type="number" min={2000}value={inputWeight} onChange={handleChange2} />
             </div>
             <input type="submit" value="Submit"/>
         </form>
