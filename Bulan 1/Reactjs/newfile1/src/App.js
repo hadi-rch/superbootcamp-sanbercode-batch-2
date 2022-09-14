@@ -27,6 +27,7 @@ function App()  {
       {/* <CRUDFruits/> */}
       {/* <Student/> */}
       {/* <Move/> */}
+      
       <Fruits/>
     </div>
   );
