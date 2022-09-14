@@ -7,21 +7,21 @@ export const useTheme = () => {
 }
 
 export const ThemeProvider = ({children}) => {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState('dark')
 
     useEffect(() => {
         console.log('Theme provider', theme)
     }, [theme])
 
-    const setDarkTheme = () => setTheme('dark')
     const setLightTheme = () => setTheme('light')
+    const setDarkTheme = () => setTheme('dark')
 
 
     return (
-        <ThemeContext.Provider value={{ theme, setDarkTheme, setLightTheme }}>
+        <ThemeContext.Provider value={{ theme , setLightTheme, setDarkTheme }}>
         {children}
         </ThemeContext.Provider>
     )
 
 }
-export default ThemeContext
+export default ThemeProvider

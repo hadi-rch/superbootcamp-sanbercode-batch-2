@@ -2,7 +2,7 @@ import {useTheme} from "./theme"
 
 const Tema = () => {
 const themeContext = useTheme()
-const {theme, setDarkTheme, setLightTheme} = themeContext
+const {theme, setLightTheme, setDarkTheme} = themeContext
 
 return (
     <div>

@@ -161,41 +161,32 @@ nav.custom-nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
 }
-/* nav.custom-nav ul.light {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(206, 198, 198);
-} */
-
+nav.custom-nav.dark {
+  background-color:#333;
+}
+nav.custom-nav.light {
+  background-color:rgb(206, 198, 198);
+}
 nav.custom-nav li {
   float: left;
 }
-
 nav.custom-nav li a {
   display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+nav.custom-nav li.dark {
   color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
 }
-/* nav.custom-nav li a.light {
-  display: block;
+nav.custom-nav li.light {
   color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-} */
-
-nav.custom-nav li a:hover {
-  background-color: #111;
 }
-/* nav.custom-nav li a:hover.light {
+nav.custom-nav li a:hover {
   background-color: white;
-} */
+}
+
 
 
 
