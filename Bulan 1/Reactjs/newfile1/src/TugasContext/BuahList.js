@@ -3,8 +3,8 @@ import {BuahContext} from "./BuahContext"
 
 const BuahList = () =>{
   const [daftarBuah, setDaftarBuah, inputName, setInputName, inputPrice, setInputPrice, inputWeight, 
-    setInputWeight, showForm, setShowForm, statusForm, 
-    setStatusForm, currentIndex, setCurrentIndex] = useContext(BuahContext)
+    setInputWeight, showForm, setShowForm, statusForm, setStatusForm, currentIndex, 
+    setCurrentIndex] = useContext(BuahContext)
 
   const handleEdit = (event) => {
     let index = Number(event.target.value)
