@@ -10,10 +10,10 @@ import First from "../Tugas-Hooks/tugasHooks"
 import CRUDFruits from '../TugasCRUDHooks/fruits';
 import Student from '../Tugas Axios';
 import Fruits from '../TugasContext/Buah';
-import ContestantsTable from "../Contestants/ContestantsTable";
-import ContestantsForm from "../Contestants/ContestantsForm"
-import { useTheme } from "../Context/theme";
-import Tema from "../Context/Tema"      
+import ContestantsTable from "./ContestantsTable";
+import ContestantsForm from "./ContestantsForm"
+import { useTheme } from "./theme";
+import Tema from "./Tema";    
 
 const Routes = ()=>{
     const theme = useTheme()
