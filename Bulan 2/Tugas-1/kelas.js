@@ -28,5 +28,6 @@ class Kelas{
     }
 }
 
+
 // module.export = Kelas;
 module.exports = Kelas;

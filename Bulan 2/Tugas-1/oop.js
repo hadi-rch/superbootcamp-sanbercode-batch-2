@@ -51,6 +51,7 @@ class Frog extends Animal {
         console.log("hop hop")
     }
     }
+    
 console.log("======= B1 =======")
 var sungokong = new Ape("kera sakti")
 sungokong.yell() // "Auooo"

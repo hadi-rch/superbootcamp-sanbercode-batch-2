@@ -32,6 +32,7 @@ sanber.createClass("Laravel", "beginner", "abduh")
 sanber.createClass("React", "beginner", "abdul")
 console.log(sanber.classes)
 
+
 // let names = ["regi", "ahmad", "bondra", "iqbal", "putri", "rezky"]
 // names.map((nama, index) => {
 //   let newStud = new Student(nama)

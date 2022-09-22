@@ -3,6 +3,5 @@ class Student {
     this._name= name;
     }
 }
-
 module.exports = Student;
 
