@@ -37,7 +37,6 @@ b. Mengambil data items
 SELECT id,name as item, description, price,stock FROM items WHERE 1000000 < price ;
 SELECT id,name as item, description, price,stock FROM items WHERE name LIKE '%sang%';
 
-
 5. Mengubah data dari Database
 UPDATE items SET price = '2500000' WHERE ID = 1;
 
