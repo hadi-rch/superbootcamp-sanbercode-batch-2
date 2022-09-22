@@ -24,6 +24,10 @@ class Bootcamp {
         const class_news = new Kelas(name, level, instructor);
         this._classes.push(class_news)
     }
+    // register(kelas, newStud){
+
+
+    // }
     
 }
 
@@ -37,7 +41,7 @@ console.log(sanber.classes)
 // names.map((nama, index) => {
 //   let newStud = new Student(nama)
 //   let kelas = sanber.classes[index % 2].name
-//   sanber.register(kelas, newStud)
+//   sanber.register(kelas, newStud) 
 // })
 // // menampilkan data kelas dan student nya
 // sanber.classes.forEach(kelas => {
