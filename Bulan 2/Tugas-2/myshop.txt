@@ -1,0 +1,44 @@
+1. Membuat Database myshop
+CREATE DATABASE myshop;
+
+2. Membuat tabel-tabel baru di dalam database myshop
+USE myshop;
+CREATE TABLE users(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    name varchar(255),
+    email varchar(255),
+    password varchar(255));
+CREATE TABLE items(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    name varchar(225),
+    description varchar(225),
+    price int,
+    stock int);
+CREATE TABLE categories(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    name varchar(255));
+3.Memasukkan Data pada Table
+INSERT INTO users (name,email,password)
+    VALUES("John Doe", "jhon@doe.com","jhon123"),
+          ("Jane Doe", "jane@doe.com","jenita123");
+INSERT INTO categories (name)
+    VALUES ("gadget"),("cloth"),("men"),("women"),("branded");
+INSERT INTO items (name,description,price,stock)
+    VALUES  ("Sumsang b50","hape keren dari merek sumsang",4000000,100)
+            ("Uniklooh","baju keren dari brand ternama",500000,50)
+            ("IMHO Watch","jam tangan anak yang jujur banget",2000000,10)
+==========
+4. Mengambil Data dari Database
+
+a. Mengambil data users
+SELECT id,name, email FROM users;
+
+b. Mengambil data items
+SELECT id,name as item, description, price,stock FROM items WHERE 1000000 < price ;
+SELECT id,name as item, description, price,stock FROM items WHERE name LIKE '%sang%';
+
+
+5. Mengubah data dari Database
+UPDATE items SET price = '2500000' WHERE ID = 1;
+
+6.mysqldump -u root -p myshop > dump.txt
