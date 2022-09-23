@@ -1,0 +1,34 @@
+- tampilkan seluruh data posts yang ditulis oleh john doe.
+    SELECT users.name, blog_post.title, blog_post.body
+    FROM blog_post 
+    INNER JOIN users ON blog_post.author_id = users.id WHERE name LIKE '%Jhon doe%';
+
+- tampilkan category name, post title, author name yang memiliki category basic saja
+    SELECT categories.name, blog_post.title, users.name
+    FROM post_categories
+    INNER JOIN blog_post ON post_categories.post_id=blog_post.id
+    INNER JOIN categories ON post_categories.category_id=categories.id 
+    INNER JOIN users ON blog_post.author_id = users.id
+    WHERE categories.name = 'Basic';
+
+- tampilkan category name, post title, dan body yang ditulis oleh robert dan frank
+    SELECT categories.name, blog_post.title, blog_post.body
+    FROM post_categories
+    INNER JOIN blog_post ON post_categories.post_id=blog_post.id
+    INNER JOIN categories ON post_categories.category_id=categories.id 
+    INNER JOIN users ON blog_post.author_id = users.id
+    WHERE users.name = 'Robert' || users.name = 'Frank';
+
+-tampilkan nama penulis dan nama category untuk artikel yang memiliki lebih dari dua category
+SELECT users.name, categories.name, COUNT(post_categories.post_id)
+FROM post_categories
+INNER JOIN blog_post ON post_categories.post_id=blog_post.id
+INNER JOIN categories ON post_categories.category_id=categories.id 
+INNER JOIN users ON blog_post.author_id = users.id
+GROUP BY post_id WHERE post_id  HAVING COUNT(post_categories.post_id)> 1;
+
+
+-tampilkan nama penulis dan pos title untuk artikel yang memilik hanya 1 category saja
+
+
+
