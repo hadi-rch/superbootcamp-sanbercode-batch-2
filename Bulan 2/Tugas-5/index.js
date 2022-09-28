@@ -18,6 +18,7 @@ const getMhs = (req, res) => {
     res.status(200).json(semuaNilaiMahasiswa)
 }
 
+
 const postMhs = (req, res) => {
     // let newId = semuaNilaiMahasiswa[semuaNilaiMahasiswa.length-1].id + 1
     let newId = semuaNilaiMahasiswa.length + 1;
