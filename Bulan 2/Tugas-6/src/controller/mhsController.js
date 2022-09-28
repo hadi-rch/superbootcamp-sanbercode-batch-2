@@ -39,7 +39,7 @@ export const getMhsById = (req, res) => {
         })
     }
 export const createMhs = (req, res) => {
-    let {nama,mataKuliah,nilai} = req.body
+    let {nama,mataKuliah,nilai=0} = req.body
     let indeksNilai ="";
     if (nilai <= 100 && nilai >= 80) {
         indeksNilai="A";
