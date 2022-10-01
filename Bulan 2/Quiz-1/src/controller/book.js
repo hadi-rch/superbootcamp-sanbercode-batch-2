@@ -1,5 +1,6 @@
 import { connectionPool } from "../config/database";
 import { Books } from "../models/book";
+import { Url } from "url";
 export const getBook = (req, res) => {
     connectionPool.query("SELECT * FROM book", (err,data) => {
         if(err){
@@ -59,17 +60,31 @@ export const createBook = (req, res) => {
     // return res.status(400).json({ err: "Bukan URL" });
     // }
 
-        // let regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
-        // if (regexp.test(image_url)) {
-        //     return true;
-        // } else {
-        //     return false;
-        // }
+    // let regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+    // if (regexp.test(image_url)) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+
+    // String.prototype.isValidUrl = function() {
+    //     var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+    //     return !!regex .test(this)
+    //   }
+
+    if (image_url && !isValidUrl(image_url)) {
+        return res.status(400).json({ err: "image_url value is not URL" });
+    }
+
+
+    // if (isValidUrl(image_url)){
+    //     console.log("benerererere")
+    // }
 
 
 
     if (release_year >= 2021 || release_year < 1980) {
-      return res.status(400).json({ err: "masukan nilai 1-100" });
+      return res.status(400).json({ err: "input release year between 1980-2021" });
     } else {
     connectionPool.query(`INSERT INTO book 
     (title, description, image_url, release_year, price, total_page, thickness, category_id) VALUES 
@@ -96,13 +111,9 @@ export const updateBook = (req, res) => {
       } else {
         console.log('Nilai tidak valid');
       }
-    if (validUrl.isUri(image_url)) {
-    console.log('Looks like an URI');
-    res.json("URL benar")
-    }
-    else {
-    console.log('Not a URI');
-    return res.status(400).json({ err: "Bukan URL" });
+
+    if (image_url && !isValidUrl(image_url)) {
+        return res.status(400).json({ err: "image_url value is not URL" });
     }
     if (release_year >= 2021 || release_year < 1980) {
       return res.status(400).json({ err: "masukan nilai 1-100" });
@@ -138,3 +149,16 @@ export const deleteBook = (req, res) => {
         res.json("delete berhasil")
     })
 }
+
+export const isValidUrl = image_url=> {
+    try { 
+        return Boolean(new URL(image_url)); 
+    }
+    catch(e){ 
+        return false; 
+    }
+}
+// const isValidURL(image_url) {
+//     let validUrl = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!127(?:\.?\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[?6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1?,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00?a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u?00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/i;
+//     return validUrl(image_url);
+//   }
