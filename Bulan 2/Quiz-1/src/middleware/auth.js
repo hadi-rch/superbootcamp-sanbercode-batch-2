@@ -12,7 +12,19 @@ function authentication(req, res, next) {
     var user = auth[0];
     var pass = auth[1];
   
+  //   if (user == 'admin' && pass == 'password') {
+  //     next();
+  //   } else {
+  //     var err = "username & password salah "
+  //     res.setHeader('WWW-Authenticate', 'Basic');
+  //     err.status = 401;
+  //     return next(err);
+  // }
     if (user == 'admin' && pass == 'password') {
+      next();
+    }else if (user == 'cecep' && pass == 'cecep') {
+      next();
+    }else if (user == 'admin' && pass == 'cecep') {
       next();
     } else {
       var err = "username & password salah "
@@ -20,6 +32,27 @@ function authentication(req, res, next) {
       err.status = 401;
       return next(err);
   }
+
+  
+  
+  // switch (user && pass) {
+  //   case (user == 'admin' && pass == 'password'):
+  //     next();
+  //   case (user == 'ujang' && pass == 'ujang'):
+  //     next();
+  //   case (user == 'cecep' && pass == 'cecep'):
+  //     next();
+  //   break;     
+  //   default:
+  //     var err = "username & password salah "
+  //     res.setHeader('WWW-Authenticate', 'Basic');
+  //     err.status = 401;
+  //     return next(err);
+  //   }
+          
 }
+
+
+
 
 export default authentication
