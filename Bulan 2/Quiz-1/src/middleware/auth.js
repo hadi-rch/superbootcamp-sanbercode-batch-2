@@ -13,7 +13,6 @@ function authentication(req, res, next) {
     var pass = auth[1];
   
     if (user == 'admin' && pass == 'password') {
-      // If Authorized user
       next();
     } else {
       var err = "username & password salah "
