@@ -72,7 +72,7 @@ export const createBook = (req, res) => {
     //     return !!regex .test(this)
     //   }
 
-    if (image_url && !isValidUrl(image_url)) {
+    if (!isValidUrl(image_url)) {
         return res.status(400).json({ err: "image_url value is not URL" });
     }
 
@@ -112,7 +112,7 @@ export const updateBook = (req, res) => {
         console.log('Nilai tidak valid');
       }
 
-    if (image_url && !isValidUrl(image_url)) {
+    if (!isValidUrl(image_url)) {
         return res.status(400).json({ err: "image_url value is not URL" });
     }
     if (release_year >= 2021 || release_year < 1980) {
