@@ -72,19 +72,11 @@ export const createBook = (req, res) => {
     //     return !!regex .test(this)
     //   }
 
-    if (!isValidUrl(image_url)) {
-        return res.status(400).json({ err: "image_url value is not URL" });
-    }
-
-
-    // if (isValidUrl(image_url)){
-    //     console.log("benerererere")
+    // if (!isValidUrl(image_url)) {
+    //     return res.status(400).json({ err: "image_url value is not URL" });
     // }
-
-
-
-    if (release_year >= 2021 || release_year < 1980) {
-      return res.status(400).json({ err: "input release year between 1980-2021" });
+    if (!isValidUrl(image_url) || release_year >= 2021 || release_year < 1980) {
+      return res.status(400).json({ err: "input release year between 1980-2021 & image just URL" });
     } else {
     connectionPool.query(`INSERT INTO book 
     (title, description, image_url, release_year, price, total_page, thickness, category_id) VALUES 
