@@ -2,9 +2,37 @@ import { connectionPool } from "../config/database";
 import { Books } from "../models/book";
 import { Url } from "url";
 export const getBook = (req, res) => {
+    let maxYear = req.query.maxYear
+    let minYear = req.query.minYear
+    let title = req.query.title
+
+    if (title && maxYear && minYear) {
+        connectionPool.query(`SELECT * FROM book WHERE release_year BETWEEN ${minYear} AND ${maxYear} and title LIKE '%${title}%'`, (err, data) => {
+            if(err){
+                console.log(err);
+                res.sendStatus(500);
+                return;
+            }
+            let bookFiltered = data.map(el=>{
+                let {id, title, description, image_url, release_year, price, total_page, thickness, created_at, updated_at, category_id} = el
+                let bookName = new Books(id, title, description, image_url, release_year, price, total_page, thickness)
+                bookName.created_at = created_at
+                bookName.updated_at = updated_at
+                bookName.categoty_id = category_id
+                return bookName
+            })
+            // console.log(bookFiltered);
+            return res.json(bookFiltered)
+        })  
+    }
+    
+
+
+
     connectionPool.query("SELECT * FROM book", (err,data) => {
         if(err){
-            console.error(err);
+            console.log(err);
+            res.sendStatus(500);
             return;
         }
         let books = data.map(el=>{
@@ -15,7 +43,7 @@ export const getBook = (req, res) => {
             newBook.category_id= category_id
             return newBook;
         })
-        res.json(books)
+        return res.json(books)
     })
 }
 export const getBookById = (req, res) => {
@@ -37,7 +65,7 @@ export const getBookById = (req, res) => {
             newBook.created_at= created_at
             newBook.updated_at= updated_at
             newBook.category_id= category_id
-            res.json(newBook)
+            return res.json(newBook)
         })
     }
 export const createBook = (req, res) => {
@@ -87,7 +115,7 @@ export const createBook = (req, res) => {
             return;
         }
         console.log(data)
-        res.json("create berhasil")
+        return res.json("create berhasil")
     })}
 }
 export const updateBook = (req, res) => {
@@ -104,12 +132,9 @@ export const updateBook = (req, res) => {
         console.log('Nilai tidak valid');
       }
 
-    if (!isValidUrl(image_url)) {
-        return res.status(400).json({ err: "image_url value is not URL" });
-    }
-    if (release_year >= 2021 || release_year < 1980) {
-      return res.status(400).json({ err: "masukan nilai 1-100" });
-    } else {
+      if (!isValidUrl(image_url) || release_year >= 2021 || release_year < 1980) {
+        return res.status(400).json({ err: "input release year between 1980-2021 & image just URL" });
+      } else {
     connectionPool.query(`UPDATE book SET 
         title='${title}', 
         description='${description}', 
@@ -126,7 +151,7 @@ export const updateBook = (req, res) => {
             return;
         }
         console.log(data)
-        res.json("update berhasil")
+        return res.json("update berhasil")
     })}
 }
 export const deleteBook = (req, res) => {
@@ -138,7 +163,7 @@ export const deleteBook = (req, res) => {
             return;
         }
         console.log(data)
-        res.json("delete berhasil")
+        return res.json("delete berhasil")
     })
 }
 

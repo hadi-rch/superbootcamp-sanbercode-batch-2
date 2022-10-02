@@ -22,9 +22,9 @@ function authentication(req, res, next) {
   // }
     if (user == 'admin' && pass == 'password') {
       next();
-    }else if (user == 'cecep' && pass == 'cecep') {
+    }else if (user == 'editor' && pass == 'secret') {
       next();
-    }else if (user == 'admin' && pass == 'cecep') {
+    }else if (user == 'trainer' && pass == 'rahasia') {
       next();
     } else {
       var err = "username & password salah "
