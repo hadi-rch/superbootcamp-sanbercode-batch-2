@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model articles {
+  id                  Int                   @id @default(autoincrement())
+  title               String                @db.VarChar(255)
+  content             String                @db.LongText
+  published           Int                   @db.TinyInt
+  createdAt           DateTime              @default(now())
+  deletedAt           DateTime              @default(now())
+  images              images[]
+  articles_tags       articles_tags[]
+  articles_categories articles_categories[]
+}
+
+model images {
+  id         Int       @id @default(autoincrement())
+  name       String    @db.VarChar(255)
+  image_url  String    @db.VarChar(255)
+  article_id Int?
+  article    articles? @relation(fields: [article_id], references: [id])
+}
+
+model tags {
+  id          Int             @id @default(autoincrement())
+  name        String          @unique @db.VarChar(255)
+  createdAt   DateTime        @default(now())
+  deletedAt   DateTime        @default(now())
+  article_tag articles_tags[]
+}
+
+model categories {
+  id                Int                   @id @default(autoincrement())
+  name              String                @unique @db.VarChar(255)
+  createdAt         DateTime              @default(now())
+  deletedAt         DateTime              @default(now())
+  article_categorie articles_categories[]
+}
+
+model articles_tags {
+  article_id Int
+  tags_id    Int
+  article    articles @relation(fields: [article_id], references: [id])
+  tag        tags     @relation(fields: [tags_id], references: [id])
+
+  @@id([article_id, tags_id])
+}
+
+model articles_categories {
+  article_id  Int
+  category_id Int
+  article     articles   @relation(fields: [article_id], references: [id])
+  category    categories @relation(fields: [category_id], references: [id])
+
+  @@id([article_id, category_id])
+}
