@@ -22,42 +22,17 @@ CREATE TABLE `articles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `articles` (`id`, `title`, `content`, `published`, `createdAt`, `deletedAt`, `author_id`) VALUES
-(1,	'Mark new',	'filosofi',	1,	'2022-10-06 11:26:03.152',	'2022-10-06 11:26:03.152',	NULL),
-(2,	'Mark new',	'filosofi',	1,	'2022-10-06 11:37:25.175',	'2022-10-06 11:37:25.175',	NULL),
-(3,	'Mark Zuck',	'filosofi',	0,	'2022-10-06 11:37:48.812',	'2022-10-06 11:37:48.812',	NULL),
-(4,	'Mark Zuck newqq',	'filosofi',	0,	'2022-10-06 14:55:22.511',	'2022-10-06 14:55:22.511',	NULL),
-(5,	'Mark Zuck newqq',	'filosofi',	0,	'2022-10-06 15:03:54.336',	'2022-10-06 15:03:54.336',	NULL),
-(6,	'Mark Zucker',	'filosofi',	0,	'2022-10-06 15:04:42.624',	'2022-10-06 15:04:42.624',	NULL),
-(7,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:07:11.539',	'2022-10-06 15:07:11.539',	NULL),
-(8,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:08:24.670',	'2022-10-06 15:08:24.670',	NULL),
-(9,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:14:47.320',	'2022-10-06 15:14:47.320',	NULL),
-(10,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:15:42.220',	'2022-10-06 15:15:42.220',	NULL),
-(11,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:17:26.957',	'2022-10-06 15:17:26.957',	NULL),
-(12,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:19:11.033',	'2022-10-06 15:19:11.033',	NULL),
-(13,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:22:39.047',	'2022-10-06 15:22:39.047',	NULL),
-(14,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:29:04.049',	'2022-10-06 15:29:04.049',	NULL),
-(15,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:31:30.016',	'2022-10-06 15:31:30.016',	NULL),
-(16,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:33:38.875',	'2022-10-06 15:33:38.875',	NULL),
-(17,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:35:40.154',	'2022-10-06 15:35:40.154',	NULL),
-(18,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:38:52.786',	'2022-10-06 15:38:52.786',	NULL),
-(19,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:39:54.176',	'2022-10-06 15:39:54.176',	NULL),
-(20,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:44:07.240',	'2022-10-06 15:44:07.240',	NULL),
-(21,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:46:02.584',	'2022-10-06 15:46:02.584',	NULL),
-(22,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:53:17.348',	'2022-10-06 15:53:17.348',	NULL),
-(23,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:57:01.751',	'2022-10-06 15:57:01.751',	NULL),
-(24,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 15:58:47.293',	'2022-10-06 15:58:47.293',	NULL),
-(25,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 16:00:05.444',	'2022-10-06 16:00:05.444',	NULL),
-(26,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 16:01:20.520',	'2022-10-06 16:01:20.520',	NULL),
-(27,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 16:01:50.745',	'2022-10-06 16:01:50.745',	NULL),
-(28,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 16:04:45.606',	'2022-10-06 16:04:45.606',	NULL),
-(29,	'Mark Zucker',	'filosofi teras',	1,	'2022-10-06 22:32:41.684',	'2022-10-06 22:32:41.684',	NULL),
-(30,	'Mark Zucker111',	'filosofi teras',	1,	'2022-10-06 22:48:25.853',	'2022-10-06 22:48:25.853',	NULL),
-(31,	'Mark Zucker111',	'filosofi teras',	1,	'2022-10-06 22:53:52.726',	'2022-10-06 22:53:52.726',	NULL),
-(32,	'Mark Zucker111',	'filosofi teras',	1,	'2022-10-06 22:53:57.704',	'2022-10-06 22:53:57.704',	NULL),
-(33,	'Mark Zucker111',	'filosofi teras',	1,	'2022-10-06 23:10:46.361',	'2022-10-06 23:10:46.361',	NULL),
-(34,	'Mark Zucker111a',	'filosofi teras',	1,	'2022-10-06 23:10:53.008',	'2022-10-06 23:10:53.008',	NULL),
-(35,	'Mark Zucker111a',	'filosofiss teras',	1,	'2022-10-06 23:12:34.559',	'2022-10-06 23:12:34.559',	NULL),
-(36,	'Mark Zucker111a',	'filosofiss teras',	1,	'2022-10-06 23:15:55.648',	'2022-10-06 23:15:55.648',	6);
+(2,	'Buku Teologi Islam',	'Sejarah islam abad ke-9 ',	1,	'2022-10-06 11:37:25.175',	'2022-10-06 11:37:25.175',	6),
+(3,	'filsafat dasar',	'Filosofi teras ',	1,	'2022-10-06 11:37:48.812',	'2022-10-06 11:37:48.812',	6),
+(4,	'Sistem operasi',	'sejarah linux',	1,	'2022-10-06 14:55:22.511',	'2022-10-06 14:55:22.511',	6),
+(5,	'Debian',	'keunggulan linux debian',	1,	'2022-10-06 15:03:54.336',	'2022-10-06 15:03:54.336',	6),
+(6,	'cyber security',	'dasar penggunaan DVWA',	1,	'2022-10-06 15:04:42.624',	'2022-10-06 15:04:42.624',	6),
+(7,	'cyber security',	'penggunaan NMAP',	1,	'2022-10-06 15:07:11.539',	'2022-10-06 15:07:11.539',	6),
+(8,	'cyber security',	'dasar penggunaan OWASP top ten',	1,	'2022-10-06 15:08:24.670',	'2022-10-06 15:08:24.670',	6),
+(9,	'filsafat nietzsche',	'Tuhan telah mati',	1,	'2022-10-06 15:14:47.320',	'2022-10-06 15:14:47.320',	6),
+(10,	'filsafat barat',	'Nietszche membunuh Tuhan',	1,	'2022-10-06 15:15:42.220',	'2022-10-06 15:15:42.220',	6),
+(36,	'artikel bahasa indonesi',	'tugas bahasa indonesi',	1,	'2022-10-06 23:15:55.648',	'2022-10-06 23:15:55.648',	6),
+(37,	'Filsafat kontemporer',	'filosofiss teras',	1,	'2022-10-07 10:42:00.695',	'2022-10-07 10:42:00.695',	6);
 
 DROP TABLE IF EXISTS `articles_categories`;
 CREATE TABLE `articles_categories` (
@@ -70,76 +45,21 @@ CREATE TABLE `articles_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `articles_categories` (`article_id`, `category_id`) VALUES
-(4,	1),
-(5,	1),
-(6,	1),
 (7,	1),
-(8,	1),
-(9,	1),
-(10,	1),
-(11,	1),
-(12,	1),
-(13,	1),
-(14,	1),
-(15,	1),
-(16,	1),
-(17,	1),
-(18,	1),
-(19,	1),
-(20,	1),
-(21,	1),
-(22,	1),
-(23,	1),
-(24,	1),
-(25,	1),
-(26,	1),
-(27,	1),
-(28,	1),
-(29,	1),
-(30,	1),
-(31,	1),
-(32,	1),
-(33,	1),
-(34,	1),
-(35,	1),
 (36,	1),
+(37,	1),
 (2,	2),
-(3,	2),
-(4,	2),
-(5,	2),
-(6,	2),
-(7,	2),
 (8,	2),
 (9,	2),
 (10,	2),
-(11,	2),
-(12,	2),
-(13,	2),
-(14,	2),
-(15,	2),
-(16,	2),
-(17,	2),
-(18,	2),
-(19,	2),
-(20,	2),
-(21,	2),
-(22,	2),
-(23,	2),
-(24,	2),
-(25,	2),
-(26,	2),
-(27,	2),
-(28,	2),
-(29,	2),
-(30,	2),
-(31,	2),
-(32,	2),
-(33,	2),
-(34,	2),
-(35,	2),
 (36,	2),
-(2,	3),
-(3,	4);
+(37,	2),
+(3,	3),
+(2,	4),
+(3,	4),
+(4,	4),
+(5,	4),
+(6,	4);
 
 DROP TABLE IF EXISTS `articles_tags`;
 CREATE TABLE `articles_tags` (
@@ -153,75 +73,20 @@ CREATE TABLE `articles_tags` (
 
 INSERT INTO `articles_tags` (`article_id`, `tags_id`) VALUES
 (2,	1),
-(4,	1),
-(5,	1),
+(3,	1),
 (6,	1),
 (7,	1),
 (8,	1),
 (9,	1),
 (10,	1),
-(11,	1),
-(12,	1),
-(13,	1),
-(14,	1),
-(15,	1),
-(16,	1),
-(17,	1),
-(18,	1),
-(19,	1),
-(20,	1),
-(21,	1),
-(22,	1),
-(23,	1),
-(24,	1),
-(25,	1),
-(26,	1),
-(27,	1),
-(28,	1),
-(29,	1),
-(30,	1),
-(31,	1),
-(32,	1),
-(33,	1),
-(34,	1),
-(35,	1),
 (36,	1),
-(2,	2),
+(37,	1),
 (3,	2),
-(3,	3),
-(4,	4),
-(5,	4),
-(6,	4),
-(7,	4),
-(8,	4),
-(9,	4),
-(10,	4),
-(11,	4),
-(12,	4),
-(13,	4),
-(14,	4),
-(15,	4),
-(16,	4),
-(17,	4),
-(18,	4),
-(19,	4),
-(20,	4),
-(21,	4),
-(22,	4),
-(23,	4),
-(24,	4),
-(25,	4),
-(26,	4),
-(27,	4),
-(28,	4),
-(29,	4),
-(30,	4),
-(31,	4),
-(32,	4),
-(33,	4),
-(34,	4),
-(35,	4),
-(36,	4);
+(4,	2),
+(5,	2),
+(2,	3),
+(36,	4),
+(37,	4);
 
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
@@ -234,10 +99,12 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `categories` (`id`, `name`, `createdAt`, `deletedAt`) VALUES
-(1,	'jeff bezz',	'2022-10-06 11:34:39.029',	'2022-10-06 11:34:39.029'),
-(2,	'Socrates',	'2022-10-06 11:34:58.395',	'2022-10-06 11:34:58.395'),
-(3,	'Aristotele',	'2022-10-06 11:35:14.548',	'2022-10-06 11:35:14.548'),
-(4,	'Filsafat Yunani',	'2022-10-06 11:35:29.892',	'2022-10-06 11:35:29.892');
+(1,	'olahraga',	'2022-10-06 11:34:39.029',	'2022-10-06 11:34:39.029'),
+(2,	'sejarah',	'2022-10-06 11:34:58.395',	'2022-10-06 11:34:58.395'),
+(3,	'psychology',	'2022-10-06 11:35:14.548',	'2022-10-06 11:35:14.548'),
+(4,	'Filsafat Yunani',	'2022-10-06 11:35:29.892',	'2022-10-06 11:35:29.892'),
+(5,	'basic DVWA',	'2022-10-07 11:55:07.985',	'2022-10-07 11:55:07.985'),
+(6,	'OWASP top TEN',	'2022-10-07 11:55:31.884',	'2022-10-07 11:55:31.884');
 
 DROP TABLE IF EXISTS `images`;
 CREATE TABLE `images` (
@@ -251,9 +118,10 @@ CREATE TABLE `images` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `images` (`id`, `name`, `image_url`, `article_id`) VALUES
-(1,	'finding nemo eps3',	'https://th.bing.com/th/id/OIP.XZ8UZ_p6vlQ2h5vJACyVOQHaOG?w=115&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7',	1),
-(2,	'finding nemo trial',	'https://th.bing.com/th/id/OIP.XZ8UZ_p6vlQ2h5vJACyVOQHaOG?w=115&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7',	1),
-(3,	'finding nemo last episode',	'https://th.bing.com/th/id/OIP.XZ8UZ_p6vlQ2h5vJACyVOQHaOG?w=115&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7',	1);
+(1,	'finding nemo last episode',	'https://th.bing.com/th/id/OIP.XZ8UZ_p6vlQ2h5vJACyVOQHaOG?w=115&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7',	2),
+(2,	'finding nemo trial',	'https://th.bing.com/th/id/OIP.XZ8UZ_p6vlQ2h5vJACyVOQHaOG?w=115&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7',	2),
+(3,	'finding nemo last episode',	'https://th.bing.com/th/id/OIP.XZ8UZ_p6vlQ2h5vJACyVOQHaOG?w=115&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7',	2),
+(4,	'anonym',	'https://th.bing.com/th/id/OIP.XZ8UZ_p6vlQ2h5vJACyVOQHaOG?w=115&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7',	3);
 
 DROP TABLE IF EXISTS `profile`;
 CREATE TABLE `profile` (
@@ -285,10 +153,10 @@ CREATE TABLE `tags` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `tags` (`id`, `name`, `createdAt`, `deletedAt`) VALUES
-(1,	'logika dasar',	'2022-10-06 11:36:03.202',	'2022-10-06 11:36:03.202'),
-(2,	'matinya socrates',	'2022-10-06 11:36:15.582',	'2022-10-06 11:36:15.582'),
-(3,	'Atomic Habits',	'2022-10-06 11:36:36.501',	'2022-10-06 11:36:36.501'),
-(4,	'pshycology money',	'2022-10-06 11:37:06.810',	'2022-10-06 11:37:06.810'),
+(1,	'filsafat',	'2022-10-06 11:36:03.202',	'2022-10-06 11:36:03.202'),
+(2,	'Teknologi',	'2022-10-06 11:36:15.582',	'2022-10-06 11:36:15.582'),
+(3,	'self improvement',	'2022-10-06 11:36:36.501',	'2022-10-06 11:36:36.501'),
+(4,	'sports',	'2022-10-06 11:37:06.810',	'2022-10-06 11:37:06.810'),
 (5,	'pshycology ',	'2022-10-06 13:31:28.860',	'2022-10-06 13:31:28.860');
 
 DROP TABLE IF EXISTS `user`;
@@ -325,4 +193,4 @@ CREATE TABLE `_prisma_migrations` (
 INSERT INTO `_prisma_migrations` (`id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count`) VALUES
 ('c41a6e82-5ca2-4d95-ab4a-efc1c7be5b56',	'6aa9cb95cd9200e09d4eacfed845da42ac17403a15a3aa6d0645bb2b9acd1353',	'2022-10-06 09:33:47.253',	'20221006093346_add_models_all',	NULL,	NULL,	'2022-10-06 09:33:46.790',	1);
 
--- 2022-10-07 01:22:03
+-- 2022-10-07 15:38:07

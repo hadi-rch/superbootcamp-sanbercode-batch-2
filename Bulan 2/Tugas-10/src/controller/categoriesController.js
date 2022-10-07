@@ -4,9 +4,9 @@ const prisma = new PrismaClient();
 
 export const getCategories = async (req,res) => {
  const category = await prisma.categories.findMany({
-    include:{
-        article_categorie: true,
-    }
+    // include:{
+    //     article_categorie: true,
+    // }
  })
  return res.status(200).json(category)
 }

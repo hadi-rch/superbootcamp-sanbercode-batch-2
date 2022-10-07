@@ -11,8 +11,8 @@ import { jwtAuth } from '../middleware/auth';
 router.get('/api/articles',getAllArticle)
 router.post('/api/articles',jwtAuth,createArticle)
 router.get('/api/articles/:id',getArticleById)
-router.put('/api/articles/:id',updateArticle)
-router.delete('/api/articles/:id',deleteArticle)
+router.put('/api/articles/:id',jwtAuth,updateArticle)
+router.delete('/api/articles/:id',jwtAuth,deleteArticle)
 
 
 router.get('/api/images',getImages)

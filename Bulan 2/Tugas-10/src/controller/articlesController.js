@@ -6,22 +6,25 @@ const prisma = new PrismaClient()
 
 export const getAllArticle= async(req,res)=>{
   const allArticle = await prisma.articles.findMany()
-
   res.json(allArticle)
+  
 }
 
 export const getArticleById=async(req,res)=>{
   let {id} = req.params
-  const article = await prisma.articles.findFirstOrThrow({
-    where:{
-      id: parseInt(id)
-    },
-    include: {
-        articles_categories: true, articles_tags: true
-    }
-  })
-
-  res.json(article)
+  try {
+    const article = await prisma.articles.findFirstOrThrow({
+      where:{
+        id: parseInt(id)
+      },
+      include: {
+          articles_categories: true, articles_tags: true
+      }
+    })
+    res.json(article)
+  } catch (err) {
+    return res.status(404).json({error: err.message})
+  }
 }
 
 export const createArticle = async (req, res)=>{
@@ -95,6 +98,7 @@ const getNewIdsAndDeletedIds = (currentIds, newIds)=> {
 }
 
 export const updateArticle = async (req, res)=>{
+  let {userId} = getUser(req)
   let {id}= req.params
   id = parseInt(id)
 
@@ -136,7 +140,7 @@ export const updateArticle = async (req, res)=>{
 
     const newArticle = await prisma.articles.update({
       data:{
-        title, content, published,
+        title, content, published, author_id:userId,
         articles_categories: {
           create: new_category_ids.map(e=>{
             let result = {

@@ -4,9 +4,9 @@ const prisma = new PrismaClient();
 
 export const getTags = async (req,res) => {
  const tag = await prisma.tags.findMany({
-    include :{
-        article_tag : true
-    }
+    // include :{
+    //     article_tag : true
+    // }
  })
  return res.status(200).json(tag)
 }
