@@ -1,0 +1,89 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model articles {
+  id                  Int                   @id @default(autoincrement())
+  title               String                @db.VarChar(255)
+  content             String                @db.LongText
+  published           Int                   @db.TinyInt
+  createdAt           DateTime              @default(now())
+  updatedAt           DateTime              @default(now())
+  images              images[]
+  articles_tags       articles_tags[]
+  articles_categories articles_categories[]
+  author_id           Int?
+  author              user?                 @relation(fields: [author_id], references: [id])
+}
+
+model images {
+  id         Int       @id @default(autoincrement())
+  name       String    @db.VarChar(255)
+  image_url  String    @db.VarChar(255)
+  article_id Int?
+  article    articles? @relation(fields: [article_id], references: [id])
+}
+
+model tags {
+  id          Int             @id @default(autoincrement())
+  name        String          @unique @db.VarChar(255)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @default(now())
+  article_tag articles_tags[]
+}
+
+model categories {
+  id                Int                   @id @default(autoincrement())
+  name              String                @unique @db.VarChar(255)
+  createdAt         DateTime              @default(now())
+  updatedAt         DateTime              @default(now())
+  article_categorie articles_categories[]
+}
+
+model articles_tags {
+  article_id Int
+  tags_id    Int
+  article    articles @relation(fields: [article_id], references: [id])
+  tag        tags     @relation(fields: [tags_id], references: [id])
+
+  @@id([article_id, tags_id])
+}
+
+model articles_categories {
+  article_id  Int
+  category_id Int
+  article     articles   @relation(fields: [article_id], references: [id])
+  category    categories @relation(fields: [category_id], references: [id])
+
+  @@id([article_id, category_id])
+}
+
+model user {
+  id        Int        @id @default(autoincrement())
+  username  String     @unique @db.VarChar(255)
+  email     String     @unique
+  password  String
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @default(now())
+  article   articles[]
+  profile   profile?
+}
+
+model profile {
+  id         Int       @id @default(autoincrement())
+  address    String?   @db.VarChar(255)
+  firstName  String?   @db.VarChar(255)
+  lastName   String?   @db.VarChar(255)
+  city       String?   @db.VarChar(255)
+  birth_date DateTime? @db.Date
+  user_id    Int       @unique
+  user       user      @relation(fields: [user_id], references: [id])
+}
